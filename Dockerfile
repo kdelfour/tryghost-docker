@@ -1,4 +1,4 @@
-FROM node:0.10
+FROM node:0.12
 
 RUN groupadd user && useradd --create-home --home-dir /home/user -g user user
 
@@ -20,7 +20,7 @@ RUN arch="$(dpkg --print-architecture)" \
 ENV GHOST_SOURCE /usr/src/ghost
 WORKDIR $GHOST_SOURCE
 
-ENV GHOST_VERSION 0.8.0
+ENV GHOST_VERSION 0.9.0
 
 RUN buildDeps=' \
 		gcc \
