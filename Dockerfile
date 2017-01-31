@@ -1,4 +1,4 @@
-FROM node:0.12
+FROM node:4
 
 RUN groupadd user && useradd --create-home --home-dir /home/user -g user user
 
